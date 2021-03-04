@@ -1,3 +1,5 @@
+# For easy setup, name your table ratingstbl and add two columns named rating and ratingdate
+
 import sqlite3
 
 conn = sqlite3.connect("DATABASE FILE")
