@@ -5,14 +5,13 @@ def submitRating():
     today = getToday.strftime("%x")
     conn = sqlite3.connect("DATABASE FILE")
     cur = conn.cursor()
-    cur.execute("INSERT INTO ratingstbl (ratings, ratingdate) VALUES (?, ?)", (ratingInput, today))
+    cur.execute("INSERT INTO ratingstbl (ratings, ratingdate) VALUES (?, ?)", (rating, today))
     conn.commit()
     conn.close()
 
 print("A rating is required between 1 - 10.")
-ratingInput = input("Enter Rating: ")
 try:
-    rating = int(ratingInput)
+    rating = int(input("Enter Rating: "))
     if rating > 10 or rating < 0:
         print("Your rating was invalid.")
     elif rating >= 8:
@@ -25,6 +24,6 @@ try:
         print("Your rating was poor!")
     elif rating >= 0 and rating < 2:
         print("Your rating was bad!")
+    submitRating()
 except:
     print("Invalid character entered.")
-submitRating()
