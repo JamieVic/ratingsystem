@@ -10,7 +10,7 @@ This program works using any Python interpreter. You can view the database data 
 - Delete all ratings
 To see the commands, you can type "help" in the checkrating Python file.
 ## How it Works
-In the rating Python file, the user will enter their rating which is stored in the ratingInput variable. After pressing Enter, a function will be called that gets the date the rating is entered, converts it to mm/dd/yyyy format for readability, and stores it in the today variable. The try/except statement ensures a valid entry is made in the input function and the if/else statement checks the number to see which range it falls in and provides the user with feedback based on their rating. If the data is valid, both the date and input are stored in the database.
+In the rating Python file, the user will enter their rating which is stored in the rating variable. After pressing Enter, a function will be called that gets the date the rating is entered, converts it to mm/dd/yyyy format for readability, and stores it in the today variable. The try/except statement ensures a valid entry is made in the input function and the if/else statement checks the number to see which range it falls in and provides the user with feedback based on their rating. If the data is valid, both the date and input are stored in the database.
 
 In the checkrating Python file, the user can connect to the database and check the data stored using various commands. A command can be used and stored in the sqlcommand input variable. An if/else statement checks to see if the user entered a valid command. If the database admin forgets a command, they can type "help" to get a list of available commands.
 
